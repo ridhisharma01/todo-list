@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🧸 My Little To-Do List</title>
+
+  <!-- 💖 Cute Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- 🎀 Your CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <!-- 🌗 Light/Dark/Auto Theme Toggle -->
+  <div class="mode-toggle">
+    <button id="themeToggle">🖥 Auto</button>
+  </div>
+
+  <!-- 🌸 Soft Background Overlay -->
+  <div class="bg-overlay"></div>
+
+  <!-- 📦 Main Container -->
+  <div class="container">
+
+    <!-- 📅 Today’s Date -->
+    <h1 id="dateHeading">Today</h1>
+    <p class="subtext">✨ things I need to do, gently ✨</p>
+
+    <!-- 📝 Input Form -->
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Write something cute..." required />
+      <button type="submit">＋ Add</button>
+    </form>
+
+    <!-- 📋 Task List -->
+    <ul id="task-list"></ul>
+
+  </div>
+
+  <!-- 🧠 JavaScript Logic -->
+  <script src="script.js"></script>
+</body>
+</html>

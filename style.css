@@ -1,0 +1,170 @@
+/* Fonts & Reset */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+  --bg: #fff6f9;
+  --card: #ffeef3;
+  --text: #333;
+  --accent: #ff9aa2;
+}
+
+[data-theme="dark"] {
+  --bg: #1f1f1f;
+  --card: #2c2c2c;
+  --text: #f1f1f1;
+  --accent: #ffb6c1;
+}
+
+/* Dark mode override (optional) */
+.dark {
+  --bg: #2c2c2c;
+  --card: #3a3a3a;
+  --text: #f9f9f9;
+  --accent: #ffb6c1;
+}
+
+body {
+  background-image: url('hearts-bg.jpeg'); /* 🟣 your cute background */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: var(--text);
+  transition: all 0.3s ease;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Glassy container */
+.container {
+  background-color: #ffffffcc; /* white with transparency */
+  color: var(--text);
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  min-height: 500px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: relative;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  color: #5e457e;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: #a07cc7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+#task-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+button {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--accent);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff6f91;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+li {
+ background-color: var(--card); 
+  color: var(--text);             
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+li span {
+  flex: 1;
+  padding-left: 10px;
+  font-size: 1rem;
+}
+
+/* 🌗 Light/Dark Mode Toggle */
+.mode-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Optional: Background overlay tint */
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.3); /* Light mode default */
+  transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .bg-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
